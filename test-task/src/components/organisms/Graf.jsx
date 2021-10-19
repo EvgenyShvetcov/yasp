@@ -3,6 +3,7 @@ import { Colomn } from "../atoms/Colomn";
 import { DifferenceTable } from "../atoms/DifferenceTable";
 import { Standard } from "../atoms/Standard";
 import { Footer } from "./Footer";
+import Arrow from "./../../icons/Arrow.svg";
 
 export const Graf = ({ data, size }) => {
   return (
@@ -55,7 +56,7 @@ export const Graf = ({ data, size }) => {
               }px + 20px)`,
               left: `40px`,
               width: "1px",
-              background: "black",
+              background: "#898290",
             }}
           ></div>
           <div
@@ -65,7 +66,7 @@ export const Graf = ({ data, size }) => {
               height: `1px`,
               left: `40px`,
               width: `calc(50% - 52px)`,
-              background: "black",
+              background: "#898290",
             }}
           ></div>
           <div
@@ -77,7 +78,7 @@ export const Graf = ({ data, size }) => {
               }px + 20px)`,
               left: `calc(50% - 12px)`,
               width: "1px",
-              background: "black",
+              background: "#898290",
             }}
           ></div>
 
@@ -90,7 +91,7 @@ export const Graf = ({ data, size }) => {
               }px + 20px)`,
               left: `calc(50% + 12px)`,
               width: "1px",
-              background: "black",
+              background: "#898290",
             }}
           ></div>
           <div
@@ -100,7 +101,7 @@ export const Graf = ({ data, size }) => {
               height: `1px`,
               left: `calc(50% + 12px)`,
               width: `calc(50% - 52px)`,
-              background: "black",
+              background: "#898290",
             }}
           ></div>
           <div
@@ -112,9 +113,31 @@ export const Graf = ({ data, size }) => {
               }px + 20px)`,
               left: `calc(100% - 40px)`,
               width: "1px",
-              background: "black",
+              background: "#898290",
             }}
           ></div>
+          <img
+            alt=""
+            src={Arrow}
+            style={{
+              position: "absolute",
+              top: `calc(100% - ${
+                (data?.prod?.front + data?.prod?.back + data?.prod?.db) * size
+              }px - 43px)`,
+              left: `calc(100% - 43px)`,
+            }}
+          />
+          <img
+            alt=""
+            src={Arrow}
+            style={{
+              position: "absolute",
+              top: `calc(100% - ${
+                (data?.test?.front + data?.test?.back + data?.test?.db) * size
+              }px - 43px)`,
+              left: `calc(50% - 15px)`,
+            }}
+          />
 
           {/* Захардкодил стрелки */}
 
