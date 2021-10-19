@@ -30,26 +30,31 @@ export const Main = () => {
           data?.prod?.front + data?.prod?.back + data?.prod?.db,
           data?.test?.front + data?.test?.back + data?.test?.db,
           data?.norm,
-        ])
+        ]) || 1
       );
     }
   }, [data]);
 
   return (
     <>
-      <div className="main">
-        <div className="main__header">
-          <div className="main__title">
-            Количество пройденных тестов {data?.title}
+      {data && size && (
+        <div className="main">
+          <div className="main__header">
+            <div className="main__title">
+              Количество пройденных тестов {data?.title}
+            </div>
+            <button
+              className="button"
+              onClick={() => setOpen((state) => !state)}
+            >
+              <img src={Button} alt=""></img>
+            </button>
           </div>
-          <button className="button" onClick={() => setOpen((state) => !state)}>
-            <img src={Button} alt=""></img>
-          </button>
+          <div className="main__body">
+            <Graf data={data} size={300 / size} />
+          </div>
         </div>
-        <div className="main__body">
-          <Graf data={data} size={300 / size} />
-        </div>
-      </div>
+      )}
       {open && <Dropdown tests={tests} setChosenTest={setChosenTest} />}
     </>
   );
