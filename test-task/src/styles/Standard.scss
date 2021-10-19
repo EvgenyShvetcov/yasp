@@ -1,0 +1,23 @@
+.standard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #898290;
+  width: 80px;
+  border-radius: 10px;
+  background: repeating-linear-gradient(
+    -45deg,
+    #ffffff 0 10px,
+    #4ab6e8 10px 20px
+  );
+
+  &__inner {
+    width: 48px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    border-radius: 5px;
+  }
+}

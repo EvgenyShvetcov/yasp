@@ -1,0 +1,18 @@
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  position: absolute;
+  top: 32px;
+  right: 20px;
+  border: 1px solid rgb(219, 219, 219);
+  border-radius: 4px;
+  &__button {
+    padding: 2px 0 2px 0;
+    border: none;
+    background: #ffffff;
+    &:hover {
+      background: rgb(230, 230, 230);
+    }
+  }
+}
