@@ -5,10 +5,6 @@ import { Standard } from "../atoms/Standard";
 import { Footer } from "./Footer";
 
 export const Graf = ({ data, size }) => {
-  console.log("size", size);
-  console.log(
-    352 - (data?.dev?.front + data?.dev?.back + data?.dev?.db) * size
-  );
   return (
     <>
       <div className="graf">
