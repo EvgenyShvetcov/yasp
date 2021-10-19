@@ -8,7 +8,7 @@ export const Main = () => {
   const [data, setData] = useState();
   const [size, setSize] = useState();
   const [open, setOpen] = useState(false);
-  const [chosenTest, setChosenTest] = useState("https://rcslabs.ru/ttrp3.json");
+  const [chosenTest, setChosenTest] = useState("https://rcslabs.ru/ttrp1.json");
 
   const tests = [
     "https://rcslabs.ru/ttrp1.json",
