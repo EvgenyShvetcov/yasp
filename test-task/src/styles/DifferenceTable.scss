@@ -2,11 +2,14 @@
   min-width: 48px;
   height: 24px;
   border-radius: 50px;
-  background: #00cc99;
+  background: #898290;
   display: flex;
   align-items: center;
   justify-content: center;
   &.-bad {
     background: #fc440f;
+  }
+  &.-good {
+    background: #00cc99;
   }
 }
