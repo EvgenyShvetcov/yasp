@@ -1,2 +1,9 @@
 # yasp
-test-task
+Test task.
+
+To run type in terminal:
+
+cd test-task
+npm start
+
+
